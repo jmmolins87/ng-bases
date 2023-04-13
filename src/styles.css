@@ -37,6 +37,10 @@ button:focus {
     outline: none;
 }
 
+li {
+    list-style: none;
+}
+
 .p-1 {
     padding: 1px;
 }

@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
         <h2>El número base es: <strong>{{ base }}</strong></h2>
         
         <div>
-            <button (click)="amount(base)" >+ {{ base }}</button>
+            <button (click)="amount(base)">+ {{ base }}</button>
             <span>{{ number }}</span>
             <button (click)="amount(-base)">- {{ base }}</button>
         </div>
@@ -23,7 +23,7 @@ export class CounterComponent {
     number: number = 10;
     base: number = 5;
 
-    amount(valor: number) {
+    amount(valor: number): void {
         this.number += valor;
     }
     
