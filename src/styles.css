@@ -37,10 +37,30 @@ button:focus {
     outline: none;
 }
 
+ul {
+    padding: 0;
+}
+
 li {
     list-style: none;
 }
 
+input {
+    display: block;
+    margin: 5px;
+}
+
 .p-1 {
     padding: 1px;
+}
+.form-dbz {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.form-dbz div {
+    width: 100%;
+}
+.form-dbz button {
+    width: 100%;
 }
