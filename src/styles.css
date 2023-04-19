@@ -3,7 +3,6 @@
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 200;
 }
-
 html,
 body {
 
@@ -12,42 +11,35 @@ body {
     color: #3e4144;
     -webkit-font-smoothing: antialiased;
 }
-
-
 dd {
     font-weight: bold;
 }
-
 button {
     background-color: black;
     border-radius: 5px;
     border: 0px;
     color: white;
     cursor: pointer;
-    margin-right: 5px;
-    margin-left: 5px;
     padding: 5px 10px;
 }
-
 button:hover {
     background-color: #3e4144;
 }
-
 button:focus {
     outline: none;
 }
-
 ul {
     padding: 0;
 }
-
 li {
     list-style: none;
 }
-
 input {
     display: block;
-    margin: 5px;
+    margin: 5px 0;
+}
+input:first-of-type {
+    margin-top: 0;
 }
 
 .p-1 {
