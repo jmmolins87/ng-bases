@@ -1,14 +1,17 @@
 <h3>Agregar</h3>
 <hr>
 <form 
-    class="form-dbz" >
+    class="form-dbz" 
+    (ngSubmit)="emmitCharacter()">
     <div>
         <input 
+            [(ngModel)]="characters.name"
             name="name"
             type="text" 
             class="form-control" 
             placeholder="Nombre">
         <input 
+            [(ngModel)]="characters.power"
             name="power"
             type="number" 
             class="form-control" 

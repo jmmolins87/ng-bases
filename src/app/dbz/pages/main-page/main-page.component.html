@@ -4,10 +4,12 @@
     <hr>
     <div class="row">
         <div class="col">
-            <app-dbz-list></app-dbz-list>
+            <app-dbz-list 
+                [characters]="characters"
+                (onDelete)="deleteCharacter($event)"></app-dbz-list>
         </div>
         <div class="col">
-            <app-add-character ></app-add-character>
+            <app-add-character (onNewCharacter)="onNewCharacter($event)"></app-add-character>
         </div>
     </div>
 </div>
