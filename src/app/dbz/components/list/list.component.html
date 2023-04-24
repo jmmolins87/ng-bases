@@ -1,4 +1,4 @@
-<h3>Listado</h3>
+<h2>Personajes</h2>
 <hr>
 <ul class="list-group">
     <ng-container *ngFor="
@@ -6,16 +6,18 @@
         let i = index;
         let isFirst = first;
         let isLast = last;">
-        <li class="list-group-item d-flex justify-content-between align-items-center
+        <li class="
+            list-group-item d-flex justify-content-between align-items-center
             {{ isFirst ? 'list-group-item-success' : '' }}
-            {{ isLast ? 'list-group-item-warning' : '' }}" >
+            {{ isLast ? 'list-group-item-info' : '' }}">
             <div>
                 <span class="text-primary">{{ i + 1 }}. </span>
-                <span>{{ character.name}} - </span>
-                <span>Poder: <strong>{{ character.power }}</strong></span>
+                <span>{{ character.name }} - </span>
+                <span>poder: <strong>{{ character.power }}</strong></span>
             </div>
-            <button class="btn btn-danger" (click)="deleteCharacter(i)">
-                <svg xmlns="http://www.w3.org/2000/svg" 
+            <button class="btn btn-danger" (click)="onDeleteCharacter(i)">
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
                     width="16" 
                     height="16" 
                     fill="currentColor" 

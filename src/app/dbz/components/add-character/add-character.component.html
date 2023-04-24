@@ -1,25 +1,21 @@
-<h3>Agregar</h3>
+<h2>Añade tu personaje</h2>
 <hr>
-<form 
-    class="form-dbz" 
-    (ngSubmit)="emmitCharacter()">
-    <div>
-        <input 
-            [(ngModel)]="characters.name"
-            name="name"
-            type="text" 
-            class="form-control" 
-            placeholder="Nombre">
-        <input 
-            [(ngModel)]="characters.power"
-            name="power"
-            type="number" 
-            class="form-control" 
-            placeholder="Poder">
-    </div>
+<form (ngSubmit)="emmitCharacter( characters )">
+    <input 
+    [(ngModel)]="characters.name"
+        name="name"
+        type="text" 
+        class="form-control" 
+        placeholder="Escribe el nombre">
+    <input 
+    [(ngModel)]="characters.power"
+        name="power" 
+        type="number" 
+        class="form-control" 
+        placeholder="Dános el poder">
     <button 
-        type="submit" 
-        class="btn btn-primary">
+        class="btn btn-outline-primary" 
+        type="submit">
         Agregar
     </button>
 </form>

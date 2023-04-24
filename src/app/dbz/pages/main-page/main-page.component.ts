@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Character } from '../../interfaces/dbz.interface';
+import { Character } from '../../interfaces/character.interface';
 
 @Component({
   selector: 'app-main-page',
@@ -14,29 +14,18 @@ export class MainPageComponent {
       power: 15000
     },
     {
-      name: 'Cell',
-      power: 14000
-    },
-    {
-      name: 'Trunks',
-      power: 10000
-    },
-    {
       name: 'Vegeta',
       power: 12500
-    },
-    {
-      name: 'Freezer',
-      power: 14500
     }
   ];
 
-  onNewCharacter( character: Character ) {
+  onNewCharacter( character: Character ): void {
     this.characters.push( character );
   }
-  
-  deleteCharacter( index: number ) {
-    this.characters.splice( index, 1 );
+
+  onDeleteCharacter( i: number ): void {
+    this.characters.splice(i, 1);
   }
+
 
 }

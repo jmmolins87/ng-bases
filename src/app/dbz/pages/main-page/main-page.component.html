@@ -1,12 +1,10 @@
-
 <div class="container">
-    <h1>Dragon Ball Z</h1>
-    <hr>
     <div class="row">
         <div class="col">
-            <app-dbz-list 
+            <app-list 
                 [characters]="characters"
-                (onDelete)="deleteCharacter($event)"></app-dbz-list>
+                (onDelete)="onDeleteCharacter($event)">
+            </app-list>
         </div>
         <div class="col">
             <app-add-character (onNewCharacter)="onNewCharacter($event)"></app-add-character>
