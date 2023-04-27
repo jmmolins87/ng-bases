@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Character } from '../../interfaces/character.interface';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Character } from '../../interface/character.interface';
 
 @Component({
   selector: 'app-list',
@@ -9,13 +9,16 @@ import { Character } from '../../interfaces/character.interface';
 export class ListComponent {
 
   @Input()
-  public characters: Character[] = []; 
+  public characters: Character[] = [];
 
   @Output()
-  onDelete: EventEmitter<number> = new EventEmitter();
+  public onDelete: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter( i: number ): void {
-    this.onDelete.emit(i);
+
+  onDeleteCharacter( id?: string ) {
+    if(!id) return;
+    
+    this.onDelete.emit( id );    
   }
 
 }

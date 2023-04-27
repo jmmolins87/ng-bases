@@ -6,6 +6,7 @@ import { ListComponent } from './components/list/list.component';
 import { FormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
     MainPageComponent,

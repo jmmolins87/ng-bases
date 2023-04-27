@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Character } from '../../interfaces/character.interface';
+import { Character } from '../../interface/character.interface';
 
 @Component({
   selector: 'app-add-character',
@@ -14,13 +14,13 @@ export class AddCharacterComponent {
   public characters: Character = {
     name: '',
     power: 0
-  }
+  };
 
-  emmitCharacter( character: Character ): void {
+  emmitCharacter(character: Character) {
     if( this.characters.name.length === 0 ) return;
-    this.onNewCharacter.emit( character );
+    this.onNewCharacter.emit(character);
 
-    this.characters = { name: '', power: 0 };
+    this.characters = { name: '', power: 0 }
   }
 
 }
